@@ -1,0 +1,35 @@
+/*Fuente Open Sans*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* font-family: "Open Sans", sans-serif;*/
+
+/*La diferencia entre estilar en HTML y CSS es que en HTML se hace en cada archivo, mientras que en CSS se hace una vez y se aplica a todo el sitio web. Esto permite mantener un estilo coherente y facilita los cambios futuros.*/
+
+body { /*El body solo puede tener un solo estilado: el font-family. El body no se estila, salvo contadas excepciones. Una de esas excepciones es esta. Porque la idea es estilar siempre sobre main, header y footer.*/
+     font-family: "Open Sans", sans-serif;
+        background-color: black;
+}
+
+h1 { /*En CSS las etiquetas tales como h1, h2, etc. funcionan como selectores para estilizar*/
+    color:greenyellow;
+    font-size: 48px;
+     /*El font-family se puede aplicar a texto independiente*/
+}
+p{
+    color: aqua;
+    font-size: 24px;
+}
+/*.p-central a { El "." funciona para usar el class* y estilizar de forma específica. El atributo class requiere que se sume al html de dicha línea de código. Se puede reutilizar, es la idea.*/ /*La "a" equivale al enlace, ya que estos enlaces tienen reglas impuestas por el navegador que anulan las herencias*/
+
+
+/* El último selector es el id, que se usa con el símbolo #. Este se usa para estilizar un elemento específico de la página. Es única e irrepetible a diferencia de class. No utilizar id para estilar, sirve para otras cosas, como Javascript.*/
+/*Ejemplo: #color-link sería nuestro id, luego iría el { color:black; y listo*/
+/* Estilar un contenedor como section, article o div solo funciona  si las etiquetas dentro no tienen estilos propios, ya que estos tienen más rango*/
+
+.li-nav {
+    list-style: none;
+}
+
+.nav-link {
+    color: aqua;
+    text-decoration: none; /*Quita el subrayado de los enlaces*/
+}
