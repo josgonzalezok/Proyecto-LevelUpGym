@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS ------------------------------------------------------------------------->
+     <link rel="stylesheet" href="../styles/styles.css">
     <title>Contacto</title>
 </head>
 <body>
@@ -19,6 +22,64 @@
     </header>
 
     <main>
+
+        <section>
+            <article>
+                <h1>Contáctate con nosotros</h1>
+                <p>¿Tienes alguna pregunta, comentario o simplemente quieres ponerte en contacto con nosotros? Completa el siguiente formulario y te responderemos lo antes posible. ¡Estaremos encantados de saber de ti!</p>
+                <img src="../images/gymbackground.png" alt="Gym Image" width="600" height="400">
+            </article>
+        </section>
+
+    <!-- Formularios-->
+    <form action="#" method="post"> <!-- Etiqueta contenedora del form-->
+        <h2>Contacto</h2>
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="lastname">Apellido</label>
+        <input type="text" id="lastname" name="lastname" required>
+
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="country-code">Código de país</label>
+        <select id="country-code" name="country-code" required>
+        <option value="+54">🇦🇷 +54 (Argentina)</option>
+        <option value="+1">🇺🇸 +1 (EE.UU.)</option>
+        <option value="+34">🇪🇸 +34 (España)</option>
+        <option value="+52">🇲🇽 +52 (México)</option>
+        <option value="+55">🇧🇷 +55 (Brasil)</option>
+        <option value="+57">🇨🇴 +57 (Colombia)</option>
+        </select>
+
+        <label for="area-code">Código de área</label>
+        <input 
+        type="tel" 
+        id="area-code" 
+        name="area-code" 
+        required 
+        pattern="[0-9]+" 
+        inputmode="numeric"
+        maxlength="5"
+        >
+
+        <label for="phone">Teléfono</label>
+        <input 
+        type="tel" 
+        id="phone" 
+        name="phone" required pattern="[0-9]+" 
+        inputmode="numeric"
+        >
+
+        <label for="subject">Asunto</label>
+        <input type="text" id="asunto" name="asunto" required>
+
+        <label for="message">Tu mensaje</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+
 
     </main>
 

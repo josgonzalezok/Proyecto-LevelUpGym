@@ -5,11 +5,11 @@
 /*La diferencia entre estilar en HTML y CSS es que en HTML se hace en cada archivo, mientras que en CSS se hace una vez y se aplica a todo el sitio web. Esto permite mantener un estilo coherente y facilita los cambios futuros.*/
 
 body { /*El body solo puede tener un solo estilado: el font-family. El body no se estila, salvo contadas excepciones. Una de esas excepciones es esta. Porque la idea es estilar siempre sobre main, header y footer.*/
-     font-family: "Open Sans", sans-serif;
-        background-color: black;
+    font-family: "Open Sans", sans-serif;
+    background-color: #000; /* fondo negro */
 }
 
-h1 { /*En CSS las etiquetas tales como h1, h2, etc. funcionan como selectores para estilizar*/
+h1, h2, h3 { /*En CSS las etiquetas tales como h1, h2, etc funcionan como selectores para estilizar*/
     color:greenyellow;
     font-size: 48px;
      /*El font-family se puede aplicar a texto independiente*/
@@ -20,6 +20,10 @@ p{
 }
 /*.p-central a { El "." funciona para usar el class* y estilizar de forma específica. El atributo class requiere que se sume al html de dicha línea de código. Se puede reutilizar, es la idea.*/ /*La "a" equivale al enlace, ya que estos enlaces tienen reglas impuestas por el navegador que anulan las herencias*/
 
+label {
+    color: aqua;
+    font-size: 24px;
+}
 
 /* El último selector es el id, que se usa con el símbolo #. Este se usa para estilizar un elemento específico de la página. Es única e irrepetible a diferencia de class. No utilizar id para estilar, sirve para otras cosas, como Javascript.*/
 /*Ejemplo: #color-link sería nuestro id, luego iría el { color:black; y listo*/
@@ -29,7 +33,50 @@ p{
     list-style: none;
 }
 
-.nav-link {
-    color: aqua;
-    text-decoration: none; /*Quita el subrayado de los enlaces*/
+a {
+  color: #00ccff; /* enlaces azul claro */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/*Planes - Membresías ------------------------------------------------------------------------*/
+
+.planes-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.plan-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 250px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.plan-card h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.plan-card .precio {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #2e8b57;
+}
+
+.entrenamiento {
+  background-color: #af3737; /* gris oscuro para tarjetas */
+  color: #f0f0f0;
+}
+
+.btn-contacto {
+  background-color: #00cc66;
+  color: white;
 }
